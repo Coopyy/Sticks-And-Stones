@@ -45,7 +45,7 @@ void function bankrupt(entity player) {
 	}
 	player.SetPlayerGameStat( PGS_ASSAULT_SCORE, 0)
 
-	EmitSoundOnEntityOnlyToPlayer( player, player, "UI_CTF_3P_EnemyScore" )
+	EmitSoundOnEntityOnlyToPlayer( player, player, "UI_InGame_MarkedForDeath_PlayerMarked" )
 }
 
 void function OnWinnerDetermined()
