@@ -1,0 +1,12 @@
+"lang"
+{
+	"Language" "english"
+	"Tokens"
+	{	
+        "SCOREBOARD_BANKRUPTS" "Bankrupts"
+        "SNS_LEADER_BANKRUPT" "Kill Leader Bankrupt!"
+        "SNS_LEADER_BANKRUPT_SUB" "%s1 Was Reset By %s2"
+        "SNS_BANKRUPT" "Bankrupt!"
+        "SNS_BANKRUPT_SUB" "Your Score Was Reset By %s1"
+    }
+}
