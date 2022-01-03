@@ -2,7 +2,7 @@ WeaponData
 {
 	Mods
 	{
-        	sns
+        sns
 		{
 			damage_near_value "9999"
 			damage_far_value "9999"
@@ -15,6 +15,7 @@ WeaponData
 			projectile_damage_reduction_per_bounce "0.0"
 			projectile_damages_owner "0"
 			projectile_ricochet_max_count "3"
+			ads_move_speed_scale "1"
 		}
 	}
 }
