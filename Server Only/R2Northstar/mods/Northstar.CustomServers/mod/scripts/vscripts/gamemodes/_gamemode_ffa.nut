@@ -20,6 +20,7 @@ void function OnPlayerKilled( entity victim, entity attacker, var damageInfo )
 	{
 		if ( DamageInfo_GetDamageSourceIdentifier( damageInfo ) == eDamageSourceId.mp_weapon_grenade_sonar || DamageInfo_GetDamageSourceIdentifier( damageInfo ) == eDamageSourceId.human_execution)
 		{
+			EmitSoundOnEntityOnlyToPlayer( attacker, attacker, "UI_CTF_3P_TeamGrabFlag" )
 			bankrupt(victim)
 			AddTeamScore( attacker.GetTeam(), 5 )
 			attacker.AddToPlayerGameStat( PGS_ASSAULT_SCORE, 5 )
@@ -43,6 +44,8 @@ void function bankrupt(entity player) {
 		AddTeamScore( player.GetTeam(), -1 )
 	}
 	player.SetPlayerGameStat( PGS_ASSAULT_SCORE, 0)
+
+	EmitSoundOnEntityOnlyToPlayer( player, player, "UI_CTF_3P_EnemyScore" )
 }
 
 void function OnWinnerDetermined()
@@ -59,7 +62,7 @@ void function OnPlayerRespawned( entity player )
 	foreach ( entity weapon in player.GetOffhandWeapons() )
 		player.TakeWeaponNow( weapon.GetWeaponClassName() )
 	
-	array<string> mods = ["sns", "pas_fast_swap"]
+	array<string> mods = ["sns", "pas_fast_swap", "tactical_cdr_on_kill"]
 	player.GiveWeapon( "mp_weapon_wingman_n", mods)
 	player.GiveOffhandWeapon( "melee_pilot_emptyhanded", OFFHAND_MELEE )
 	player.GiveOffhandWeapon( "mp_weapon_thermite_grenade", OFFHAND_RIGHT )
@@ -98,5 +101,5 @@ entity function GetWinningPlayer()
 void function SetHighlight(entity player) {
     foreach ( entity player in GetPlayerArray() )
         Highlight_ClearEnemyHighlight(player)
-    Highlight_SetEnemyHighlight( player, "map_scan" )
+    Highlight_SetEnemyHighlight( player, "enemy_sonar" )
 }
