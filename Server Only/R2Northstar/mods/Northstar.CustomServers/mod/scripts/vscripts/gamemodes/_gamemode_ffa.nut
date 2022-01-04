@@ -20,8 +20,12 @@ void function OnPlayerKilled( entity victim, entity attacker, var damageInfo )
 	{
 		if ( DamageInfo_GetDamageSourceIdentifier( damageInfo ) == eDamageSourceId.mp_weapon_grenade_sonar || DamageInfo_GetDamageSourceIdentifier( damageInfo ) == eDamageSourceId.human_execution)
 		{
+			attacker.TakeWeaponNow( "mp_weapon_grenade_sonar" ) // resets cooldown if you kill with it (i think)
+			attacker.GiveOffhandWeapon( "mp_weapon_grenade_sonar", OFFHAND_LEFT )
+
 			EmitSoundOnEntityOnlyToPlayer( attacker, attacker, "UI_CTF_3P_TeamGrabFlag" )
 			bankrupt(victim)
+
 			AddTeamScore( attacker.GetTeam(), 5 )
 			attacker.AddToPlayerGameStat( PGS_ASSAULT_SCORE, 5 )
 			attacker.AddToPlayerGameStat( PGS_TITAN_KILLS, 1 )
