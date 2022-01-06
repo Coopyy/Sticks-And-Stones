@@ -6,6 +6,7 @@ WeaponData
 		{
 			damage_near_value "9999"
 			damage_far_value "9999"
+			damage_very_far_value "9999"
 			ammo_clip_size "1"
 			reload_time "*0.5"
 			reload_time_late1 "*0.5"

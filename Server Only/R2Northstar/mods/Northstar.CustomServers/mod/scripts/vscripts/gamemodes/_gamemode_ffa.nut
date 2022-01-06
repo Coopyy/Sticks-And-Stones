@@ -67,7 +67,7 @@ void function OnPlayerRespawned( entity player )
 	foreach ( entity weapon in player.GetOffhandWeapons() )
 		player.TakeWeaponNow( weapon.GetWeaponClassName() )
 	
-	array<string> mods = ["sns", "pas_fast_ads", "tactical_cdr_on_kill"]
+	array<string> mods = ["sns", "pas_fast_ads", "tactical_cdr_on_kill", "pas_run_and_gun", "pas_fast_swap"]
 	player.GiveWeapon( "mp_weapon_wingman_n", mods)
 	player.GiveOffhandWeapon( "melee_pilot_emptyhanded", OFFHAND_MELEE )
 	player.GiveOffhandWeapon( "mp_weapon_thermite_grenade", OFFHAND_RIGHT )
