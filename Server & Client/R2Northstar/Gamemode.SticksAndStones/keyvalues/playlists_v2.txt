@@ -17,7 +17,7 @@ playlists
 				max_players 16
 				max_teams 20
 				scorelimit 300
-				classic_mp 0
+				classic_mp 1
 
 				gamemode_score_hint #GAMEMODE_SCORE_HINT_FFA
 			}
@@ -39,7 +39,7 @@ playlists
 				max_players 20
 				max_teams 20
 				scorelimit 300
-				classic_mp 0
+				classic_mp 1
 				
 				gamemode_score_hint #GAMEMODE_SCORE_HINT_FFA
 			}	
