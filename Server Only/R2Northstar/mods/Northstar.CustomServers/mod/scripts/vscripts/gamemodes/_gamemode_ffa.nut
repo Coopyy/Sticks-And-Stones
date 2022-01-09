@@ -106,5 +106,5 @@ entity function GetWinningPlayer()
 void function SetHighlight(entity player) {
     foreach ( entity player in GetPlayerArray() )
         Highlight_ClearEnemyHighlight(player)
-    Highlight_SetEnemyHighlight( player, "enemy_sonar" )
+    Highlight_SetEnemyHighlight( player, "sp_objective_entity" )
 }
