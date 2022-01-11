@@ -39,7 +39,7 @@ void function OnPlayerKilled( entity victim, entity attacker, var damageInfo )
 			}
 			
 			EmitSoundOnEntityOnlyToPlayer( attacker, attacker, "UI_CTF_3P_TeamGrabFlag" )
-			bankrupt(victim)
+			bankrupt(victim, attacker)
 
 			AddTeamScore( attacker.GetTeam(), GetCurrentPlaylistVarInt("reset_kill_value", 0) )
 			attacker.AddToPlayerGameStat( PGS_ASSAULT_SCORE, GetCurrentPlaylistVarInt("reset_kill_value", 0) )
@@ -58,7 +58,7 @@ void function OnPlayerKilled( entity victim, entity attacker, var damageInfo )
 	}
 }
 
-void function bankrupt(entity player) {
+void function bankrupt(entity player, entity attacker) {
 	while (GameRules_GetTeamScore(player.GetTeam()) > 0) {
 		AddTeamScore( player.GetTeam(), -1 )
 	}
