@@ -9,14 +9,6 @@
             "DefaultValue": "1"
         },
         {
-            "Name": "kill_leader_highlight",
-            "DefaultValue": "enemy_boss_bounty"
-        },
-        {
-            "Name": "offhand_weapon",
-            "DefaultValue": "mp_weapon_thermite_grenade"
-        },
-        {
             "Name": "kill_value",
             "DefaultValue": "10"
         },

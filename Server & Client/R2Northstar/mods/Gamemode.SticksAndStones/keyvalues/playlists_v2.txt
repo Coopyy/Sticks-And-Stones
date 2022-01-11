@@ -35,7 +35,7 @@ playlists
 				description #PL_sns_desc
 				hint #PL_sns_desc
 				abbreviation #PL_sns_abbr
-				image ffa
+				image ps
 				max_players 20
 				max_teams 20
 				scorelimit 300

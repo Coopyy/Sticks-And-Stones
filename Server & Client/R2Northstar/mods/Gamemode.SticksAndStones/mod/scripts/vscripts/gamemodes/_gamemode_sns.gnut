@@ -85,7 +85,7 @@ void function OnPlayerRespawned( entity player )
 	array<string> mods = ["sns", "pas_fast_ads", "tactical_cdr_on_kill", "pas_run_and_gun", "pas_fast_swap"]
 	player.GiveWeapon( "mp_weapon_wingman_n", mods)
 	player.GiveOffhandWeapon( "melee_pilot_emptyhanded", OFFHAND_MELEE )
-	player.GiveOffhandWeapon( GetCurrentPlaylistVarInt("offhand_weapon", 0), OFFHAND_RIGHT )
+	player.GiveOffhandWeapon( "mp_weapon_thermite_grenade", OFFHAND_RIGHT )
 	player.GiveOffhandWeapon( "mp_weapon_grenade_sonar", OFFHAND_LEFT )
 
     if (player == GetWinningPlayer())
@@ -121,5 +121,5 @@ entity function GetWinningPlayer()
 void function SetHighlight(entity player) {
     foreach ( entity player in GetPlayerArray() )
         Highlight_ClearEnemyHighlight(player)
-    Highlight_SetEnemyHighlight( player, GetCurrentPlaylistVarInt("kill_leader_highlight", 0) )
+    Highlight_SetEnemyHighlight( player, "enemy_boss_bounty" )
 }
