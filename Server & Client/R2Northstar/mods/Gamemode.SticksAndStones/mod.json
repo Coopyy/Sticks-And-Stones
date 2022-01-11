@@ -3,6 +3,32 @@
     "LoadPriority": 0,
     "Version": "1.0.0",
     "RequiredOnClient": true,
+    "ConVars": [
+        {
+            "Name": "reset_pulse_blade_cooldown_on_pulse_blade_kill",
+            "DefaultValue": "1"
+        },
+        {
+            "Name": "kill_leader_highlight",
+            "DefaultValue": "enemy_boss_bounty"
+        },
+        {
+            "Name": "offhand_weapon",
+            "DefaultValue": "mp_weapon_thermite_grenade"
+        },
+        {
+            "Name": "kill_value",
+            "DefaultValue": "10"
+        },
+        {
+            "Name": "reset_kill_value",
+            "DefaultValue": "5"
+        },
+        {
+            "Name": "melee_kill_value",
+            "DefaultValue": "5"
+        }
+    ],
     "Scripts": [
         {
             "Path": "gamemodes/sh_gamemode_sns.gnut",
